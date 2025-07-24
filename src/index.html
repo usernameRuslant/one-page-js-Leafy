@@ -4,52 +4,20 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js-js</title>
+    <title>leafy</title>
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+    <!-- styles -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="page-header">
-      <div class="container">
-        <ul class="menu">
-          <li class="menu-item">
-            <a class="menu-link" href="./html/post-page.html">1</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="./pages/02-async.html">2</a>
-          </li>
-          <li class="menu-item">
-            <a class="menu-link" href="./pages/03-gallery.html">3</a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <form class="form js-form">
-          <label>
-            <input
-              class="form-input"
-              type="text"
-              name="search-text"
-              placeholder="Search images..."
-              required
-              autocomplete="off"
-            />
-          </label>
-          <button class="button-form" type="submit">Search</button>
-        </form>
-        <div class="wrapper-loader"><span class="loader is-hidden"></span></div>
-        <ul class="gallery js-gallery"></ul>
-        <!-- btn -->
-        <button class="loadmorebtn is-hidden" type="button">load more</button>
-      </div>
-    </main>
+    <load src="./partials/article.html" />
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>

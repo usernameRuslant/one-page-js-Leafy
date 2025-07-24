@@ -9,7 +9,9 @@
 
 /* Common styles */
 @import url('modern-normalize/modern-normalize.css');
+@import url('./base.css');
 @import url('./reset.css');
+@import url('./container.css');
 
 /* Sections style */
-@import url('./form.css');
+@import url('./article.css');
