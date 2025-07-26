@@ -15,12 +15,14 @@
     <!-- styles -->
     <link rel="icon" type="image/svg+xml" href="/one-page-js-Leafy/assets/favicon-Cd4N7v0C.svg" />
     <script type="module" crossorigin src="/one-page-js-Leafy/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/one-page-js-Leafy/assets/index-B1jKHG80.css">
+    <link rel="modulepreload" crossorigin href="/one-page-js-Leafy/assets/vendor-C9_60BBs.js">
+    <link rel="stylesheet" crossorigin href="/one-page-js-Leafy/assets/vendor-HdWFjXwp.css">
+    <link rel="stylesheet" crossorigin href="/one-page-js-Leafy/assets/index-Byev0acx.css">
   </head>
   <body>
     <header class="section-header">
   <div class="container header-container">
-    <nav class="header-nav">
+    <nav class="header-nav" aria-label="Main navigation">
       <a class="header-logo" href="./index.html">
         <img
           class="header-logo-image"
@@ -102,6 +104,210 @@
     </div>
   </div>
 </div>
+
+    <section class="section-hero">
+  <div class="container">
+    <div class="swiper">
+      <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+          <picture>
+            <!-- pc -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-1-BWO7tOuM.webp 1x, /one-page-js-Leafy/assets/hero-pc-1@2x-CkUWBCtq.webp 2x"
+              media="(min-width: 1440px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-1-D9_d0MBs.jpg 1x, /one-page-js-Leafy/assets/hero-pc-1@2x-DsOFm-BI.jpg 2x"
+              media="(min-width: 1440px)"
+              type="image/jpeg"
+            />
+            <!-- tab -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-1-BTb0uBfr.webp 1x, /one-page-js-Leafy/assets/hero-tab-1@2x-BssKv_FX.webp 2x"
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-1-Bd2ALaTU.jpg 1x, /one-page-js-Leafy/assets/hero-tab-1@2x--kFLFvcv.jpg 2x"
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <!-- mob -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-mob-1-CajRA_6h.webp 1x, /one-page-js-Leafy/assets/hero-mob-1@2x-DtOzpCxC.webp 2x"
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <img
+              class="hero-image"
+              srcset="/one-page-js-Leafy/assets/hero-mob-1@2x-BMT4Rze-.jpg 2x"
+              src="/one-page-js-Leafy/assets/hero-mob-1-CzMwj6MN.jpg"
+              alt="bags"
+              loading="lazy"
+            />
+          </picture>
+          <div class="hero-slide-content">
+            <h3 class="hero-slide-title">Get 10% off your first order</h3>
+            <a href="#section-books" class="hero-link">Shop Now!</a>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <picture>
+            <!-- pc -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-2-CgpJBhdU.webp 1x, /one-page-js-Leafy/assets/hero-pc-2@2x-CGHexIcr.webp 2x"
+              media="(min-width: 1440px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-2-DQnjmFzq.jpg 1x, /one-page-js-Leafy/assets/hero-pc-2@2x-B06nh3_G.jpg 2x"
+              media="(min-width: 1440px)"
+              type="image/jpeg"
+            />
+            <!-- tab -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-2-Bi8G_Bmy.webp 1x, /one-page-js-Leafy/assets/hero-tab-2@2x-B8P2qaBs.webp 2x"
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-2-srKF8jhc.jpg 1x, /one-page-js-Leafy/assets/hero-tab-2@2x-BLrivGQu.jpg 2x"
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <!-- mob -->
+            <source
+              srcset="data:image/webp;base64,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 1x, /one-page-js-Leafy/assets/hero-mob-2@2x-BRfbCUT8.webp 2x"
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <img
+              class="hero-image"
+              srcset="/one-page-js-Leafy/assets/hero-mob-2@2x-BDmzOkbD.jpg 2x"
+              src="data:image/jpeg;base64,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"
+              alt="bags"
+              loading="lazy"
+            />
+          </picture>
+          <div class="hero-slide-content">
+            <h3 class="hero-slide-title">
+              Save 15% on <br />
+              some books
+            </h3>
+            <a href="#section-books" class="hero-link">Shop Now!</a>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <picture>
+            <!-- pc -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-3-jenNmTZL.webp 1x, /one-page-js-Leafy/assets/hero-pc-3@2x-BuMN4V__.webp 2x"
+              media="(min-width: 1440px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-3-DdM6V7aU.jpg 1x, /one-page-js-Leafy/assets/hero-pc-3@2x-DzyCaRFF.jpg 2x"
+              media="(min-width: 1440px)"
+              type="image/jpeg"
+            />
+            <!-- tab -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-3-_biKOyMI.webp 1x, /one-page-js-Leafy/assets/hero-tab-3@2x-CsXHHvwY.webp 2x"
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-3-CD15jAvf.jpg 1x, /one-page-js-Leafy/assets/hero-tab-3@2x--gG5j1gw.jpg 2x"
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <!-- mob -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-mob-3-VfeqX9Qj.webp 1x, /one-page-js-Leafy/assets/hero-mob-3@2x-Z6Hfe3ff.webp 2x"
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <img
+              class="hero-image"
+              srcset="/one-page-js-Leafy/assets/hero-mob-3@2x-BIC7TZJx.jpg 2x"
+              src="/one-page-js-Leafy/assets/hero-mob-3-C2wtJ4yq.jpg"
+              alt="bags"
+              loading="lazy"
+            />
+          </picture>
+          <div class="hero-slide-content">
+            <h3 class="hero-slide-title">
+              Summer Sale! <br />
+              Up to -40% discounts
+            </h3>
+            <a href="#section-books" class="hero-link">Shop Now!</a>
+          </div>
+        </li>
+        <li class="swiper-slide">
+          <picture>
+            <!-- pc -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-4-CJVa8CXA.webp 1x, /one-page-js-Leafy/assets/hero-pc-4@2x-BqnVwOa-.webp 2x"
+              media="(min-width: 1440px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-pc-4-C3zU464J.jpg 1x, /one-page-js-Leafy/assets/hero-pc-4@2x-j1Dr5LI0.jpg 2x"
+              media="(min-width: 1440px)"
+              type="image/jpeg"
+            />
+            <!-- tab -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-4-DKsuwL5h.webp 1x, /one-page-js-Leafy/assets/hero-tab-4@2x-Bmlz4jfA.webp 2x"
+              media="(min-width: 768px)"
+              type="image/webp"
+            />
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-tab-4-2MiNjGsp.jpg 1x, /one-page-js-Leafy/assets/hero-tab-4@2x-cxwJJgjf.jpg 2x"
+              media="(min-width: 768px)"
+              type="image/jpeg"
+            />
+            <!-- mob -->
+            <source
+              srcset="/one-page-js-Leafy/assets/hero-mob-4-CLX1LU27.webp 1x, /one-page-js-Leafy/assets/hero-mob-4@2x-C_DLeTvf.webp 2x"
+              media="(min-width: 320px)"
+              type="image/webp"
+            />
+            <img
+              class="hero-image"
+              srcset="/one-page-js-Leafy/assets/hero-mob-4@2x-DRzowxyZ.jpg 2x"
+              src="/one-page-js-Leafy/assets/hero-mob-4-D8OhSSll.jpg"
+              alt="bags"
+              loading="lazy"
+            />
+          </picture>
+          <div class="hero-slide-content">
+            <h3 class="hero-slide-title">
+              Last chance to buy our spring bestsellers
+            </h3>
+            <a href="#section-books" class="hero-link">Shop Now!</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="hero-bottom">
+      <h1 class="hero-title">Discover Your Next Great Read Today!</h1>
+      <div class="hero-slider-controls">
+        <button class="hero-button-prev" aria-label="Prev">
+          <svg width="24" height="24">
+            <use href="/one-page-js-Leafy/assets/icons-C5ed12rK.svg#icon-left-arrow-alt"></use>
+          </svg>
+        </button>
+        <button class="hero-button-next" aria-label="Next">
+          <svg width="24" height="24">
+            <use href="/one-page-js-Leafy/assets/icons-C5ed12rK.svg#icon-right-arrow-alt"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <section class="section-article" id="section-article">
