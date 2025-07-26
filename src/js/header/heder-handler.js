@@ -2,6 +2,7 @@ import { refs } from '../refs.js';
 
 function onClickCloseMobileMenu() {
   refs.mobileMenuModal.classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
   refs.closeMobileMenuBtn.removeEventListener('click', onClickCloseMobileMenu);
   refs.openMobileMenuBtn.addEventListener('click', onClickOpenMobileMenu);
   document.removeEventListener('keydown', onEscCloseMenu);
@@ -11,6 +12,7 @@ function onClickCloseMobileMenu() {
 
 export function onClickOpenMobileMenu() {
   refs.mobileMenuModal.classList.add('is-open');
+  document.body.classList.add('no-scroll');
   refs.closeMobileMenuBtn.focus();
   refs.closeMobileMenuBtn.addEventListener('click', onClickCloseMobileMenu);
   refs.openMobileMenuBtn.removeEventListener('click', onClickOpenMobileMenu);
