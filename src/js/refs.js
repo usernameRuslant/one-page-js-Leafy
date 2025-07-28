@@ -6,4 +6,6 @@ export const refs = {
   booksCategoriesList: document.querySelector('.books-categories-list'),
   booksCategoriesSelect: document.querySelector('.books-categories-select'),
   booksList: document.querySelector('.books-list'),
+  booksShowMoreBtn: document.querySelector('.books-item-show-more'),
+  booksCount: document.querySelector('.books-info'),
 };

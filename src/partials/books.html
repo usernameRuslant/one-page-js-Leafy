@@ -4,15 +4,13 @@
     <div class="books-wrapper">
       <div class="books-wrapper-info">
         <h3 class="books-title">books</h3>
-        <p class="books-info">Showing 24 of 100</p>
+        <span class="books-info"></span>
       </div>
       <div class="books-categories">
-        <ul class="books-categories-list">
-          <!-- <li class="books-categories-list-item">All categories</li> -->
-        </ul>
+        <ul class="books-categories-list"></ul>
         <div class="books-categories-select-wrapper">
           <svg class="books-categories-select-drop" width="24" height="24">
-            <use href="../img/icons.svg#icon-chevron-down"></use>
+            <use href="/img/icons.svg#icon-chevron-down"></use>
           </svg>
           <select class="books-categories-select">
             <option selected disabled>Categories</option>
@@ -21,133 +19,14 @@
       </div>
     </div>
     <div class="books-side">
-      <ul class="books-list">
-        <!-- удалить потом -->
-        <!-- <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-        <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-        <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-        <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-        <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-        <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-        <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-        <li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li> -->
-        <!-- удалить сверху -->
-      </ul>
-      <button class="books-item-show-more" type="button">show more</button>
+      <ul class="books-list"></ul>
+      <button class="books-item-show-more is-hidden" type="button">
+        show more
+      </button>
     </div>
   </div>
 </section>
-<!-- 
-<li class="books-item">
-          <img src="#" alt="book cover" class="books-item-image" />
-          <div class="books-item-info">
-            <div class="books-item-info-left">
-              <h4 class="books-item-title">The 48 Laws of Power</h4>
-              <p class="books-item-author">Robert Greene</p>
-            </div>
-            <p class="books-item-price">$15</p>
-          </div>
-          <button type="button" class="books-item-open-modal">
-            learn more
-          </button>
-        </li>
-          -->
+
 <!-- modal -->
 <div class="books-modal-window">
   <div class="container books-modal-container">
@@ -157,7 +36,7 @@
       aria-label="close modal"
     >
       <svg width="32" height="32">
-        <use href="../img/icons.svg#icon-x"></use>
+        <use href="/img/icons.svg#icon-x"></use>
       </svg>
     </button>
     <div class="books-modal-image-wrapper">
@@ -173,7 +52,7 @@
           class="book-modal-counter-btn book-modal-counter-decrease"
         >
           <svg width="24" height="24">
-            <use href="../img/icons.svg#icon-minus"></use>
+            <use href="/img/icons.svg#icon-minus"></use>
           </svg>
         </button>
         <span class="book-modal-counter-value">1</span>
@@ -182,7 +61,7 @@
           class="book-modal-counter-btn book-modal-counter-increase"
         >
           <svg width="24" height="24">
-            <use href="../img/icons.svg#icon-plus"></use>
+            <use href="/img/icons.svg#icon-plus"></use>
           </svg>
         </button>
       </div>
@@ -197,7 +76,7 @@
           <button class="books-accordion-toggle" type="button">
             <span class="books-accordion-title">Details</span>
             <svg class="books-accordion-icon" width="24" height="24">
-              <use href="../img/icons.svg#icon-chevron-down"></use>
+              <use href="/img/icons.svg#icon-chevron-down"></use>
             </svg>
           </button>
           <div class="books-accordion-content">
@@ -210,7 +89,7 @@
           <button class="books-accordion-toggle" type="button">
             <span class="books-accordion-title">Details</span>
             <svg class="books-accordion-icon" width="24" height="24">
-              <use href="../img/icons.svg#icon-chevron-down"></use>
+              <use href="/img/icons.svg#icon-chevron-down"></use>
             </svg>
           </button>
           <div class="books-accordion-content">
@@ -229,7 +108,7 @@
           <button class="books-accordion-toggle" type="button">
             <span class="books-accordion-title">Details</span>
             <svg class="books-accordion-icon" width="24" height="24">
-              <use href="../img/icons.svg#icon-chevron-down"></use>
+              <use href="/img/icons.svg#icon-chevron-down"></use>
             </svg>
           </button>
           <div class="books-accordion-content">

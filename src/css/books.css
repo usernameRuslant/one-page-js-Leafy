@@ -259,6 +259,9 @@
     color: var(--color-scheme-1-text);
     width: 308px;
   }
+  .books-categories-list li {
+    cursor: pointer;
+  }
   .books-categories-list-item {
   }
   .books-categories-select-wrapper {

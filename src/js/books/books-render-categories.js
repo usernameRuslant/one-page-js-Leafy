@@ -7,9 +7,10 @@ export function renderCategoriesList(categories) {
       .filter(categ => categ.list_name)
       .map(
         categ =>
-          `<li data-category="${encodeURIComponent(categ.list_name)}">${
-            categ.list_name
-          }</li>`
+          // `<li data-category="${encodeURIComponent(categ.list_name)}">${
+          //   categ.list_name
+          // }</li>`
+          `<li data-category="${categ.list_name}">${categ.list_name}</li>`
       ),
   ].join('');
   refs.booksCategoriesList.innerHTML = markup;
@@ -17,15 +18,16 @@ export function renderCategoriesList(categories) {
 
 export function renderCategoriesSelect(categories) {
   const markup = [
-    `<option value="" selected disabled hidden>Categories</option>`, // заголовок-фикс
+    `<option value="" selected disabled hidden>Categories</option>`,
     `<option value="all">All categories</option>`,
     ...categories
       .filter(cat => cat.list_name)
       .map(
         cat =>
-          `<option value="${encodeURIComponent(cat.list_name)}">${
-            cat.list_name
-          }</option>`
+          // `<option value="${encodeURIComponent(cat.list_name)}">${
+          //   cat.list_name
+          // }</option>`
+          `<option value="${cat.list_name}">${cat.list_name}</option>`
       ),
   ].join('');
   refs.booksCategoriesSelect.innerHTML = markup;

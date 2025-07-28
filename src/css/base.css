@@ -94,3 +94,6 @@ main:has(.back-link) {
   border: 0;
   padding: 0;
 }
+.is-hidden {
+  display: none;
+}
