@@ -1,4 +1,5 @@
 import { getBooksByCategory, getTopBooks } from '../api';
+import { openBookModal } from './books-modal.js';
 import { onBooksDataLoaded } from './books-pagination.js';
 
 // Фильтрация уникальных книг по названию
@@ -51,4 +52,18 @@ export async function onCategorySelect(e) {
     // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить книги' });
     console.error('Ошибка при выборе категории через select:', error);
   }
+}
+///////////////////////////////////////
+export function onClickOpenModalBook(e) {
+  const btn = e.target.closest('.books-item-open-modal');
+
+  const img = e.target.closest('.books-item-image');
+  if (!btn && !img) return;
+
+  const li = e.target.closest('.books-item');
+  if (!li) return;
+
+  const bookId = li.dataset.id;
+  openBookModal(bookId);
+  console.log('Клик по learn more, id книги:', bookId);
 }

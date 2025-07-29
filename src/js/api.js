@@ -33,3 +33,13 @@ export async function getTopBooks() {
     return [];
   }
 }
+// Получение одной книги по id
+export async function getBookById(id) {
+  try {
+    const response = await axios.get(`/${id}`);
+    return response.data;
+  } catch (error) {
+    // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить книгу' });
+    return {};
+  }
+}

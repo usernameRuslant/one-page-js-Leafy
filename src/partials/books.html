@@ -8,13 +8,25 @@
       </div>
       <div class="books-categories">
         <ul class="books-categories-list"></ul>
-        <div class="books-categories-select-wrapper">
+        <!-- <div class="books-categories-select-wrapper">
           <svg class="books-categories-select-drop" width="24" height="24">
             <use href="/img/icons.svg#icon-chevron-down"></use>
           </svg>
           <select class="books-categories-select">
             <option selected disabled>Categories</option>
           </select>
+        </div> -->
+        <div class="books-categories-select-wrapper">
+          <button type="button" class="books-categories-select-btn">
+            <span class="books-categories-select-btn-text">Categories</span>
+            <svg class="books-categories-select-drop" width="24" height="24">
+              <use href="/img/icons.svg#icon-chevron-down"></use>
+            </svg>
+          </button>
+
+          <ul class="books-categories-select-list is-hidden">
+            <!-- Тут появятся li через JS -->
+          </ul>
         </div>
       </div>
     </div>
@@ -28,7 +40,7 @@
 </section>
 
 <!-- modal -->
-<div class="books-modal-window">
+<!-- <div class="books-modal-window">
   <div class="container books-modal-container">
     <button
       type="button"
@@ -126,4 +138,4 @@
       </ul>
     </div>
   </div>
-</div>
+</div> -->

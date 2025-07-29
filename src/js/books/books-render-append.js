@@ -1,10 +1,10 @@
 // Эта функция добавляет книги в конец списка
 export function appendBooks(books, container) {
   const markup = books
-    .map(({ book_image, title, author, price }) => {
+    .map(({ _id, book_image, title, author, price }) => {
       const roundedPrice = price ? Math.ceil(Number(price)) : '';
       return `
-        <li class="books-item">
+        <li class="books-item" data-id="${_id}">
           <img src="${book_image}" alt="${title} cover" class="books-item-image" />
           <div class="books-item-info">
             <div class="books-item-info-left">

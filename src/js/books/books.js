@@ -4,16 +4,20 @@ import {
   filterUniqueBooksByTitle,
   onCategoryLiClick,
   onCategorySelect,
+  onClickOpenModalBook,
 } from './books-handlers.js';
 import { onBooksDataLoaded } from './books-pagination.js';
 import { getTopBooks } from '../api.js';
-
+///
+import { openBookModal } from './books-modal.js';
+import { onClickOpenDropdown } from './books-dropdown-open.js';
+///
 // Инициализация категорий (если нужно отрендерить селекты/список)
 initCategories();
 
 // Обработчики на список и селект категорий
 refs.booksCategoriesList.addEventListener('click', onCategoryLiClick);
-refs.booksCategoriesSelect.addEventListener('change', onCategorySelect);
+refs.booksCategoriesSelectList.addEventListener('change', onCategorySelect);
 
 // Первая загрузка книг при открытии страницы
 async function initPage() {
@@ -29,3 +33,9 @@ async function initPage() {
 }
 
 initPage();
+///////////////////
+
+////////////
+refs.booksList.addEventListener('click', onClickOpenModalBook);
+////////////////
+refs.selectBtn.addEventListener('click', onClickOpenDropdown);

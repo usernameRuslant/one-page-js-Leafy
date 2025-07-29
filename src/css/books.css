@@ -38,9 +38,106 @@
   }
   .books-categories-select-wrapper {
     position: relative;
-    display: inline-block;
-    width: 100%;
+    /* display: inline-block;
+    width: 100%; */
+
+    max-width: 342px;
   }
+
+  .books-categories-select-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 43px;
+    padding: 8px 12px;
+    border: 1px solid var(--opacity-neutral-darkest-15);
+
+    border-radius: 4px;
+    background: var(--opacity-neutral-darkest-5);
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+
+    line-height: 1.5;
+    color: var(--color-scheme-1-text);
+    transition: box-shadow 0.2s;
+  }
+  /*/////////////////////////////////*/
+  .books-categories-select-btn:focus {
+    box-shadow: 0 0 0 2px #8fc4ff;
+    outline: none;
+  }
+
+  .books-categories-select-drop {
+    margin-left: 8px;
+    pointer-events: none;
+  }
+  .books-categories-select-list .simplebar-content-wrapper {
+    padding-right: 13px; /* нужный отступ справа */
+  }
+
+  .books-categories-select-list {
+    position: absolute;
+
+    top: 40px;
+    left: 0;
+    width: 100%;
+    max-height: 305px;
+
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(30, 40, 60, 0.08);
+    z-index: 5;
+    transition: opacity 0.2s, visibility 0.2s;
+    background: var(--color-scheme-1-background);
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    /* padding-right: 13px; */
+  }
+  .books-categories-select-list {
+    /* ...твой предыдущий стиль... */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--color-bamboo) var(--opacity-neutral-darkest-5); /* Firefox */
+  }
+  .books-categories-select-list::-webkit-scrollbar {
+    width: 3px;
+    height: 280px; /* Обычно высоту скроллбара браузер сам вычисляет */
+    border-radius: 4px;
+
+    margin-right: 13px; /* Chrome не учитывает отступы, но пусть будет */
+  }
+  .books-categories-select-list.is-hidden {
+    display: none;
+  }
+
+  .books-categories-select-item {
+    padding: 8px 12px;
+
+    font-weight: 400;
+    font-size: 14px;
+
+    line-height: 1.5;
+    color: var(--color-scheme-1-text);
+
+    cursor: pointer;
+    transition: background 0.2s;
+    border-radius: 0;
+  }
+
+  .books-categories-select-item:hover,
+  .books-categories-select-item.is-active {
+    background: var(--opacity-neutral-darkest-5);
+  }
+  .books-categories-select-btn-text {
+    text-wrap: nowrap;
+    overflow: hidden;
+    width: 85%;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+  /*/////////////////////////////////*/
   .books-categories-select-drop {
     position: absolute;
     right: 9px;
@@ -78,13 +175,28 @@
     flex-direction: column;
     height: 604px;
   }
+  .books-item-info-left {
+    min-width: 0;
+    width: 100%;
+  }
   .books-item-image {
     border-radius: 8px;
     width: 343px;
     height: 487px;
     background-color: teal;
     margin-bottom: 16px;
+    border: none;
+
+    outline: none;
+    /* overflow: hidden; */
   }
+  /* .books-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+  } */
   .books-item-info {
     display: flex;
     justify-content: space-between;
@@ -95,19 +207,23 @@
   .books-item-title {
     font-weight: 600;
     font-size: 16px;
-
     line-height: 1.5;
     text-transform: capitalize;
     color: var(--color-scheme-2-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    display: block;
   }
   .books-item-author {
     font-size: 14px;
     color: var(--color-scheme-2-text);
+    white-space: nowrap;
   }
   .books-item-price {
     font-weight: 600;
     font-size: 20px;
-
     line-height: 1.5;
     color: var(--color-scheme-2-text);
   }
@@ -181,10 +297,11 @@
     display: none;
   }
   .books-categories-select-wrapper {
+    width: 249px;
   }
   .books-categories-select-drop {
   }
-  .books-categories-select {
+  .books-categories-select-list {
     width: 249px;
   }
 
@@ -308,7 +425,19 @@
     padding-top: 64px;
     padding-bottom: 64px;
     width: 100%;
+    background: var(--color-scheme-1-background);
   }
+  .books-modal-window {
+    /* чтобы не выходило за экран */
+    max-height: 90vh;
+    overflow-y: auto; /* вертикальный скролл */
+    scrollbar-width: none;
+  }
+
+  /* .books-modal-container {
+    max-height: 90vh;
+    overflow-y: auto;
+  } */
 
   .books-modal-close-btn {
     position: absolute;
@@ -421,58 +550,68 @@
     color: var(--color-neutral-darkest);
     background-color: transparent;
   }
-  .books-accordion {
+
+  .books-modal-window .accordion {
+    border-radius: 0;
   }
-  .books-accordion-item {
+  .books-modal-window .accordion-item {
+    border: none;
     border-bottom: 1px solid var(--color-scheme-1-border);
   }
-  .books-accordion-item:first-child {
+  .books-modal-window .accordion-item:first-child {
     border-top: 1px solid var(--color-scheme-1-border);
   }
-  .books-accordion-toggle {
+  .books-modal-window .accordion-header {
+  }
+  .books-modal-window .accordion-button {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
-    font-weight: 600;
-    font-size: 16px;
-    background: none;
+    padding: 16px 0;
+    height: 59px;
     border: none;
-    padding: 16px 0 16px 0;
-    cursor: pointer;
+    border-radius: 0;
+    background: var(--color-scheme-1-background);
+    color: var(--color-scheme-1-text);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    box-shadow: none;
+    transition: none;
+  }
+  .books-modal-window .accordion-button:focus {
+    box-shadow: none;
     outline: none;
   }
-  .books-accordion-title {
-    text-align: left;
+  .books-modal-window .accordion-button:not(.collapsed) {
+    color: #1a1a1a;
+    background: var(--color-scheme-1-background);
     font-weight: 600;
-    font-size: 18px;
-
+    box-shadow: none;
+  }
+  .books-modal-window .accordion-button::after {
+    display: none;
+    content: none;
+  }
+  .books-modal-window .books-accordion-icon {
+    margin-left: auto;
+    stroke: #6d4435;
+    transition: transform 0.3s;
+  }
+  .books-modal-window .accordion-button:not(.collapsed) .books-accordion-icon {
+    transform: rotate(-180deg);
+  }
+  .books-modal-window .accordion-body {
+    background: var(--color-scheme-1-background);
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.5;
     color: var(--color-scheme-1-text);
-  }
-  .books-accordion-icon {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .books-accordion-item.is-open .books-accordion-icon {
-    transform: rotate(180deg);
-  }
-  .books-accordion-content {
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
-    padding: 0 0;
-  }
-  .books-accordion-item.is-open .books-accordion-content {
-    max-height: 600px;
-    opacity: 1;
-    padding: 8px 0 16px 0;
-  }
-  .books-accordion-text {
-    margin: 0;
-
-    line-height: 1.5;
-    color: var(--color-scheme-1-text);
+    font-family: var(--font-family);
   }
 }
 @media only screen and (min-width: 768px) {
@@ -528,6 +667,8 @@
   }
 }
 @media only screen and (min-width: 1440px) {
+  .accordion-item {
+  }
   .books-modal-window {
     width: 1300px;
   }

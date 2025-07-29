@@ -97,3 +97,6 @@ main:has(.back-link) {
 .is-hidden {
   display: none;
 }
+body.mod-open {
+  overflow: hidden;
+}
