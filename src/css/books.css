@@ -613,6 +613,9 @@
     color: var(--color-scheme-1-text);
     font-family: var(--font-family);
   }
+  .accordion {
+    max-width: 311px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .books-modal-window {
