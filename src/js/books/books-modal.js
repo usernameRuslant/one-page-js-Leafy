@@ -151,7 +151,7 @@ function createBookModalMarkup(book) {
       <div class="container books-modal-container">
         <button type="button" class="books-modal-close-btn" aria-label="close modal">
           <svg width="32" height="32">
-            <use href="/img/icons.svg#icon-x"></use>
+            <use href="/one-page-js-Leafy/img/icons.svg#icon-x"></use>
           </svg>
         </button>
         <div class="books-modal-image-wrapper">
@@ -165,11 +165,11 @@ function createBookModalMarkup(book) {
           }</p>
           <div class="books-modal-counter">
             <button type="button" class="book-modal-counter-btn book-modal-counter-decrease">
-              <svg width="24" height="24"><use href="/img/icons.svg#icon-minus"></use></svg>
+              <svg width="24" height="24"><use href="/one-page-js-Leafy/img/icons.svg#icon-minus"></use></svg>
             </button>
             <span class="book-modal-counter-value">1</span>
             <button type="button" class="book-modal-counter-btn book-modal-counter-increase">
-              <svg width="24" height="24"><use href="/img/icons.svg#icon-plus"></use></svg>
+              <svg width="24" height="24"><use href="/one-page-js-Leafy/img/icons.svg#icon-plus"></use></svg>
             </button>
           </div>
           <div class="books-modal-buttons">
