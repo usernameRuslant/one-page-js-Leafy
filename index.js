@@ -1,16 +1,99 @@
-import{S as w,N as C,a as d}from"./assets/vendor-Bqcn7g4X.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))r(s);new MutationObserver(s=>{for(const i of s)if(i.type==="childList")for(const l of i.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function t(s){const i={};return s.integrity&&(i.integrity=s.integrity),s.referrerPolicy&&(i.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?i.credentials="include":s.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function r(s){if(s.ep)return;s.ep=!0;const i=t(s);fetch(s.href,i)}})();const n={openMobileMenuBtn:document.querySelector(".header-mobile-menu"),closeMobileMenuBtn:document.querySelector(".mobile-menu-close"),mobileMenuModal:document.querySelector(".mobile-menu-modal"),booksCategoriesList:document.querySelector(".books-categories-list"),booksCategoriesSelect:document.querySelector(".books-categories-select"),booksList:document.querySelector(".books-list"),booksShowMoreBtn:document.querySelector(".books-item-show-more"),booksCount:document.querySelector(".books-info")};function b(){n.mobileMenuModal.classList.remove("is-open"),document.body.classList.remove("no-scroll"),n.closeMobileMenuBtn.removeEventListener("click",b),n.openMobileMenuBtn.addEventListener("click",f),document.removeEventListener("keydown",g),n.mobileMenuModal.removeEventListener("click",y),n.openMobileMenuBtn.focus()}function f(){n.mobileMenuModal.classList.add("is-open"),document.body.classList.add("no-scroll"),n.closeMobileMenuBtn.focus(),n.closeMobileMenuBtn.addEventListener("click",b),n.openMobileMenuBtn.removeEventListener("click",f),document.addEventListener("keydown",g),n.mobileMenuModal.addEventListener("click",y)}function g(e){e.key==="Escape"&&b()}function y(e){e.target.classList.contains("mobile-menu-link")&&b()}n.openMobileMenuBtn.addEventListener("click",f);new w(".swiper",{modules:[C],navigation:{nextEl:".hero-button-next",prevEl:".hero-button-prev"}});d.defaults.baseURL="https://books-backend.p.goit.global/books";async function S(){try{return(await d.get("/category-list")).data}catch{return[]}}async function M(e){try{return(await d.get(`/category?category=${e}`)).data}catch{return[]}}async function m(){try{return(await d.get("/top-books")).data}catch{return[]}}function h(e,o){const t=e.map(({book_image:r,title:s,author:i,price:l})=>{const p=l?Math.ceil(Number(l)):"";return`
-        <li class="books-item">
-          <img src="${r}" alt="${s} cover" class="books-item-image" />
+import{S as q,N as x,a as g,b as A}from"./assets/vendor-CpNM5-39.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))i(s);new MutationObserver(s=>{for(const a of s)if(a.type==="childList")for(const c of a.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&i(c)}).observe(document,{childList:!0,subtree:!0});function t(s){const a={};return s.integrity&&(a.integrity=s.integrity),s.referrerPolicy&&(a.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?a.credentials="include":s.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function i(s){if(s.ep)return;s.ep=!0;const a=t(s);fetch(s.href,a)}})();const n={openMobileMenuBtn:document.querySelector(".header-mobile-menu"),closeMobileMenuBtn:document.querySelector(".mobile-menu-close"),mobileMenuModal:document.querySelector(".mobile-menu-modal"),booksCategoriesList:document.querySelector(".books-categories-list"),booksCategoriesSelect:document.querySelector(".books-categories-select"),booksCategoriesSelectList:document.querySelector(".books-categories-select-list"),booksList:document.querySelector(".books-list"),booksShowMoreBtn:document.querySelector(".books-item-show-more"),booksCount:document.querySelector(".books-info"),selectBtn:document.querySelector(".books-categories-select-btn"),selectList:document.querySelector(".books-categories-select-list"),dropdownContainer:document.querySelector(".books-categories-select-dropdown")};function p(){n.mobileMenuModal.classList.remove("is-open"),document.body.classList.remove("no-scroll"),n.closeMobileMenuBtn.removeEventListener("click",p),n.openMobileMenuBtn.addEventListener("click",h),document.removeEventListener("keydown",L),n.mobileMenuModal.removeEventListener("click",w),n.openMobileMenuBtn.focus()}function h(){n.mobileMenuModal.classList.add("is-open"),document.body.classList.add("no-scroll"),n.closeMobileMenuBtn.focus(),n.closeMobileMenuBtn.addEventListener("click",p),n.openMobileMenuBtn.removeEventListener("click",h),document.addEventListener("keydown",L),n.mobileMenuModal.addEventListener("click",w)}function L(e){e.key==="Escape"&&p()}function w(e){e.target.classList.contains("mobile-menu-link")&&p()}n.openMobileMenuBtn.addEventListener("click",h);new q(".swiper",{modules:[x],navigation:{nextEl:".hero-button-next",prevEl:".hero-button-prev"}});g.defaults.baseURL="https://books-backend.p.goit.global/books";async function N(){try{return(await g.get("/category-list")).data}catch{return[]}}async function M(e){try{return(await g.get(`/category?category=${e}`)).data}catch{return[]}}async function v(){try{return(await g.get("/top-books")).data}catch{return[]}}async function T(e){try{return(await g.get(`/${e}`)).data}catch{return{}}}function S(e,o){const t=e.map(({_id:i,book_image:s,title:a,author:c,price:d})=>{const m=d?Math.ceil(Number(d)):"";return`
+        <li class="books-item" data-id="${i}">
+          <img src="${s}" alt="${a} cover" class="books-item-image" />
           <div class="books-item-info">
             <div class="books-item-info-left">
-              <h4 class="books-item-title">${s}</h4>
-              <p class="books-item-author">${i}</p>
+              <h4 class="books-item-title">${a}</h4>
+              <p class="books-item-author">${c}</p>
             </div>
-            <p class="books-item-price">${p?`$${p}`:"—"}</p>
+            <p class="books-item-price">${m?`$${m}`:"—"}</p>
           </div>
           <button type="button" class="books-item-open-modal">
             learn more
           </button>
         </li>
-      `}).join("");o.insertAdjacentHTML("beforeend",t)}function E(e){const o=['<li data-category="all" class="active">All categories</li>',...e.filter(t=>t.list_name).map(t=>`<li data-category="${t.list_name}">${t.list_name}</li>`)].join("");n.booksCategoriesList.innerHTML=o}function $(e){const o=['<option value="" selected disabled hidden>Categories</option>','<option value="all">All categories</option>',...e.filter(t=>t.list_name).map(t=>`<option value="${t.list_name}">${t.list_name}</option>`)].join("");n.booksCategoriesSelect.innerHTML=o}function A(){n.booksShowMoreBtn.classList.remove("is-hidden")}function L(){n.booksShowMoreBtn.classList.add("is-hidden")}let c=[],a=window.innerWidth<768?10:24;const v=4;function q(e){c=e,a=window.innerWidth<768?10:24}function N(){a+=v}async function P(){try{const e=await S();E(e),$(e)}catch(e){console.error("Ошибка загрузки категорий:",e)}}function T(){n.booksList.innerHTML="";const e=c.slice(0,a);h(e,n.booksList),c.length>a?A():L()}function B(){const e=n.booksCount;if(!e)return;const o=Math.min(a,c.length);c.length===0?e.textContent="No books to show":e.textContent=`Showing ${o} of ${c.length}`}function k(e){q(e),T(),B()}function O(){const e=c.slice(a,a+v);h(e,n.booksList),N(),a>=c.length&&L(),B()}n.booksShowMoreBtn.addEventListener("click",O);function u(e){const o=new Set;return e.filter(t=>o.has(t.title)?!1:(o.add(t.title),!0))}async function _(e){try{const o=e.target.closest("li[data-category]");if(!o)return;const t=o.getAttribute("data-category");let r;t==="all"?(r=(await m()).flatMap(i=>i.books),r=u(r)):(r=await M(t),r=u(r)),k(r)}catch(o){console.error("Ошибка при выборе категории:",o)}}async function x(e){try{const o=e.target.value;let t;o==="all"?(t=(await m()).flatMap(s=>s.books),t=u(t)):(t=await M(o),t=u(t)),k(t)}catch(o){console.error("Ошибка при выборе категории через select:",o)}}P();n.booksCategoriesList.addEventListener("click",_);n.booksCategoriesSelect.addEventListener("change",x);async function j(){try{let o=(await m()).flatMap(t=>t.books);o=u(o),k(o)}catch(e){console.error("Ошибка загрузки книг при запуске страницы:",e)}}j();
+      `}).join("");o.insertAdjacentHTML("beforeend",t)}function O(e){const o=['<li data-category="all" class="active">All categories</li>',...e.filter(t=>t.list_name).map(t=>`<li data-category="${t.list_name}">${t.list_name}</li>`)].join("");n.booksCategoriesList.innerHTML=o}function P(e){const o=['<li class="books-categories-select-item is-active" data-value="all">All categories</li>',...e.filter(t=>t.list_name).map(t=>`<li class="books-categories-select-item" data-value="${t.list_name}">${t.list_name}</li>`)].join("");n.booksCategoriesSelectList.innerHTML=o}function _(){n.booksShowMoreBtn.classList.remove("is-hidden")}function B(){n.booksShowMoreBtn.classList.add("is-hidden")}let r=[],l=window.innerWidth<768?10:24;const C=4;function D(e){r=e,l=window.innerWidth<768?10:24}function R(){l+=C}async function j(){try{const e=await N();O(e),P(e)}catch(e){console.error("Ошибка загрузки категорий:",e)}}function U(){n.booksList.innerHTML="";const e=r.slice(0,l);S(e,n.booksList),r.length>l?_():B()}function H(e){const{title:o="No title",author:t="Unknown author",price:i,book_image:s,description:a=""}=e;return`
+    <div class="books-modal-window">
+      <div class="container books-modal-container">
+        <button type="button" class="books-modal-close-btn" aria-label="close modal">
+          <svg width="32" height="32">
+            <use href="/img/icons.svg#icon-x"></use>
+          </svg>
+        </button>
+        <div class="books-modal-image-wrapper">
+          <img class="books-modal-image" src="${s}" alt="${o}" />
+        </div>
+        <div class="books-modal-info-side">
+          <h3 class="books-modal-title">${o}</h3>
+          <p class="books-modal-author">${t}</p>
+          <p class="books-modal-price">${i?"$"+Math.ceil(Number(i)):"—"}</p>
+          <div class="books-modal-counter">
+            <button type="button" class="book-modal-counter-btn book-modal-counter-decrease">
+              <svg width="24" height="24"><use href="/img/icons.svg#icon-minus"></use></svg>
+            </button>
+            <span class="book-modal-counter-value">1</span>
+            <button type="button" class="book-modal-counter-btn book-modal-counter-increase">
+              <svg width="24" height="24"><use href="/img/icons.svg#icon-plus"></use></svg>
+            </button>
+          </div>
+          <div class="books-modal-buttons">
+            <button type="button" class="books-modal-add-to-cart">add to cart</button>
+            <button type="button" class="books-modal-buy-now">buy now</button>
+          </div>
+         <div class="accordion" id="bookModalAccordion">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingDetails">
+       <button class="accordion-button collapsed" type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#collapseDetails"
+    aria-expanded="false"
+    aria-controls="collapseDetails">
+    Details
+     <svg class="books-accordion-icon" width="24" height="24">
+    <use href="/img/icons.svg#icon-chevron-down"></use>
+  </svg>
+  </button>
+    </h2>
+    <div id="collapseDetails" class="accordion-collapse collapse" aria-labelledby="headingDetails" >
+       <div class="accordion-body">
+        ${a||"No description."}
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingShipping">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShipping" aria-expanded="false" aria-controls="collapseShipping">
+        Shipping
+         <svg class="books-accordion-icon" width="24" height="24">
+    <use href="/img/icons.svg#icon-chevron-down"></use>
+  </svg>
+      </button>
+    </h2>
+    <div id="collapseShipping" class="accordion-collapse collapse" aria-labelledby="headingShipping" >
+      <div class="accordion-body">
+       We ship across the United States within 2–5 business days. All orders are processed through USPS or a reliable courier service. Enjoy free standard shipping on orders over $50.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingReturns">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReturns" aria-expanded="false" aria-controls="collapseReturns">
+        Returns
+         <svg class="books-accordion-icon" width="24" height="24">
+    <use href="/img/icons.svg#icon-chevron-down"></use>
+  </svg>
+      </button>
+    </h2>
+    <div id="collapseReturns" class="accordion-collapse collapse" aria-labelledby="headingReturns" >
+      <div class="accordion-body">
+       You can return an item within 14 days of receiving your order, provided it hasn’t been used and is in its original condition. To start a return, please contact our support team — we’ll guide you through the process quickly and hassle-free.
+      </div>
+    </div>
+  </div>
+
+</div>
+        </div>
+      </div>
+    </div>
+  `}async function I(e){if(!e)return;const o=await T(e),t=H(o);A.create(t,{onShow:s=>{const a=s.element();document.body.classList.add("mod-open"),a.addEventListener("click",u=>{const y=u.target.closest(".books-accordion-toggle");y&&y.closest(".books-accordion-item").classList.toggle("is-open"),u.target.closest(".books-modal-close-btn")&&s.close(),u.target===a&&s.close()});function c(u){u.key==="Escape"&&s.close()}document.addEventListener("keydown",c);function d(){document.body.classList.remove("mod-open"),document.removeEventListener("keydown",c),console.log("Модалка закрывается (basiclightbox:close)")}s.element().addEventListener("basiclightbox:close",d);const m=s.close;s.close=function(){d(),m.call(s)}}}).show()}function E(){const e=n.booksCount;if(!e)return;const o=Math.min(l,r.length);r.length===0?e.textContent="No books to show":e.textContent=`Showing ${o} of ${r.length}`}function f(e){D(e),U(),E()}function W(){const e=r.slice(l,l+C);S(e,n.booksList),R(),l>=r.length&&B(),E()}n.booksShowMoreBtn.addEventListener("click",W);function b(e){const o=new Set;return e.filter(t=>o.has(t.title)?!1:(o.add(t.title),!0))}async function F(e){try{const o=e.target.closest("li[data-category]");if(!o)return;const t=o.getAttribute("data-category");let i;t==="all"?(i=(await v()).flatMap(a=>a.books),i=b(i)):(i=await M(t),i=b(i)),f(i)}catch(o){console.error("Ошибка при выборе категории:",o)}}async function $(e){try{const o=e.target.value;let t;o==="all"?(t=(await v()).flatMap(s=>s.books),t=b(t)):(t=await M(o),t=b(t)),f(t)}catch(o){console.error("Ошибка при выборе категории через select:",o)}}function G(e){const o=e.target.closest(".books-item-open-modal"),t=e.target.closest(".books-item-image");if(!o&&!t)return;const i=e.target.closest(".books-item");if(!i)return;const s=i.dataset.id;I(s),console.log("Клик по learn more, id книги:",s)}function K(){n.selectList.classList.toggle("is-hidden")}const k=document.querySelector(".books-categories-select-list"),V=document.querySelector(".books-categories-select-btn-text");k.addEventListener("click",e=>{const o=e.target.closest(".books-categories-select-item");if(!o)return;const t=o.dataset.value,i=o.textContent;V.textContent=i,k.classList.add("is-hidden"),k.querySelectorAll(".is-active").forEach(s=>s.classList.remove("is-active")),o.classList.add("is-active"),$({target:{value:t}})});j();n.booksCategoriesList.addEventListener("click",F);n.booksCategoriesSelectList.addEventListener("change",$);async function Y(){try{let o=(await v()).flatMap(t=>t.books);o=b(o),f(o)}catch(e){console.error("Ошибка загрузки книг при запуске страницы:",e)}}Y();n.booksList.addEventListener("click",G);n.selectBtn.addEventListener("click",K);
 //# sourceMappingURL=index.js.map
