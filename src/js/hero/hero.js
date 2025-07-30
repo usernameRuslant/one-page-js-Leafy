@@ -4,7 +4,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.hero-swiper', {
   modules: [Navigation],
   navigation: {
     nextEl: '.hero-button-next',
