@@ -1,4 +1,4 @@
-import { getCategories, getTopBooks } from '../api.js';
+import { getCategories } from '../api.js';
 import { refs } from '../refs.js';
 import { appendBooks } from './books-render-append.js';
 import {

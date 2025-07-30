@@ -1,4 +1,4 @@
-// Эта функция добавляет книги в конец списка
+//  добавляем книги в конец списка
 export function appendBooks(books, container) {
   const markup = books
     .map(({ _id, book_image, title, author, price }) => {

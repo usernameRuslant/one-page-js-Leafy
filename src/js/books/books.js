@@ -8,10 +8,8 @@ import {
 } from './books-handlers.js';
 import { onBooksDataLoaded } from './books-pagination.js';
 import { getTopBooks } from '../api.js';
-///
-// import { openBookModal } from './books-modal.js';
 import { onClickOpenDropdown } from './books-dropdown-open.js';
-///
+
 // Инициализация категорий (если нужно отрендерить селекты/список)
 initCategories();
 
@@ -33,9 +31,8 @@ async function initPage() {
 }
 
 initPage();
-///////////////////
-// openBookModal();
-////////////
+
+//////
 refs.booksList.addEventListener('click', onClickOpenModalBook);
-////////////////
+//////
 refs.selectBtn.addEventListener('click', onClickOpenDropdown);

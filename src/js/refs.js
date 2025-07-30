@@ -14,7 +14,4 @@ export const refs = {
   /////
   selectBtn: document.querySelector('.books-categories-select-btn'),
   selectList: document.querySelector('.books-categories-select-list'),
-  dropdownContainer: document.querySelector(
-    '.books-categories-select-dropdown'
-  ),
 };
