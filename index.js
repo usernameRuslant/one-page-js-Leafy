@@ -33,7 +33,7 @@ import{S as x,N as q,a as g,b as A}from"./assets/vendor-CpNM5-39.js";(function()
             </button>
             <span class="book-modal-counter-value">1</span>
             <button type="button" class="book-modal-counter-btn book-modal-counter-increase">
-              <svg width="24" height="24"><use  xlink:href="./img/icons.svg#icon-plus"></use></svg>
+              <svg width="24" height="24"><use  href="./img/icons.svg#icon-plus"></use></svg>
             </button>
           </div>
           <div class="books-modal-buttons">
@@ -50,7 +50,7 @@ import{S as x,N as q,a as g,b as A}from"./assets/vendor-CpNM5-39.js";(function()
     aria-controls="collapseDetails">
     Details
      <svg class="books-accordion-icon" width="24" height="24">
-    <use  xlink:href="./img/icons.svg#icon-chevron-down"></use>
+    <use  href="./img/icons.svg#icon-chevron-down"></use>
   </svg>
   </button>
     </h2>
@@ -65,7 +65,7 @@ import{S as x,N as q,a as g,b as A}from"./assets/vendor-CpNM5-39.js";(function()
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShipping" aria-expanded="false" aria-controls="collapseShipping">
         Shipping
          <svg class="books-accordion-icon" width="24" height="24">
-    <use xlink:href="./img/icons.svg#icon-chevron-down"></use>
+    <use href="./img/icons.svg#icon-chevron-down"></use>
   </svg>
       </button>
     </h2>
@@ -80,7 +80,7 @@ import{S as x,N as q,a as g,b as A}from"./assets/vendor-CpNM5-39.js";(function()
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReturns" aria-expanded="false" aria-controls="collapseReturns">
         Returns
          <svg class="books-accordion-icon" width="24" height="24">
-    <use xlink:href="./img/icons.svg#icon-chevron-down"></use>
+    <use href="./img/icons.svg#icon-chevron-down"></use>
   </svg>
       </button>
     </h2>
