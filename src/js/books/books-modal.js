@@ -186,7 +186,7 @@ function createBookModalMarkup(book) {
     aria-controls="collapseDetails">
     Details
      <svg class="books-accordion-icon" width="24" height="24">
-    <use  href="./img/icons.svg#icon-chevron-down"></use>
+    <use  href="${iconSprite}#icon-chevron-down"></use>
   </svg>
   </button>
     </h2>
@@ -201,7 +201,7 @@ function createBookModalMarkup(book) {
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseShipping" aria-expanded="false" aria-controls="collapseShipping">
         Shipping
          <svg class="books-accordion-icon" width="24" height="24">
-    <use href="./img/icons.svg#icon-chevron-down"></use>
+    <use href="${iconSprite}#icon-chevron-down"></use>
   </svg>
       </button>
     </h2>
@@ -216,7 +216,7 @@ function createBookModalMarkup(book) {
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseReturns" aria-expanded="false" aria-controls="collapseReturns">
         Returns
          <svg class="books-accordion-icon" width="24" height="24">
-    <use href="./img/icons.svg#icon-chevron-down"></use>
+    <use href="${iconSprite}#icon-chevron-down"></use>
   </svg>
       </button>
     </h2>
