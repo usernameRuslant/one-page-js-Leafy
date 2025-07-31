@@ -25,8 +25,10 @@ const swiper = new Swiper('.feedbacks-swiper', {
   },
   pagination: {
     el: '.feedbacks-swiper-pagination',
-    bulletClass: 'feedbacks-pagination-bullet',
-    bulletActiveClass: 'feedbacks-pagination-bullet-active',
+    // bulletClass: 'feedbacks-pagination-bullet',
+    // bulletActiveClass: 'feedbacks-pagination-bullet-active',
     clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 2,
   },
 });

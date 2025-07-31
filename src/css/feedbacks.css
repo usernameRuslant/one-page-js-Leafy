@@ -1,33 +1,15 @@
-/* .feedbacks-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  border-radius: 4px;
-  background: #ff6b01;
-  opacity: 0.4;
-  margin-right: 6px;
-  transition: opacity 0.3s;
-}
-.feedbacks-pagination-bullet-active {
-  opacity: 1;
-  background: #fd9735;
-} */
-
 /* Styles for Mobile devices */
 @media screen {
   .section-feedbacks {
     padding-top: 64px;
     padding-bottom: 64px;
   }
-  .container {
-  }
-  .container-feedbacks {
-  }
+
   .feedbacks-title {
     color: var(--color-scheme-2-text);
     font-weight: 600;
     font-size: 36px;
 
-    /* line-height: 43px; */
     line-height: 1.2;
     letter-spacing: -0.01em;
     margin-bottom: 24px;
@@ -36,26 +18,21 @@
     font-weight: 400;
     font-size: 18px;
 
-    /* line-height: 27px; */
     line-height: 1.5;
     color: var(--color-scheme-2-text);
     margin-bottom: 80px;
   }
-  .swiper {
-  }
+
   .feedbacks-swiper {
     margin-bottom: 32px;
   }
-  .swiper-wrapper {
-  }
-  .swiper-slide {
-  }
+
   .feedbacks-item {
     height: 314px !important;
     border: 1px solid var(--color-scheme-2-border);
     border-radius: 16px;
     padding: 32px;
-    /* max-width: 341px; */
+
     width: 100%;
 
     background: var(--color-scheme-2-foreground);
@@ -64,10 +41,17 @@
     font-weight: 400;
     font-size: 18px;
 
-    /* line-height: 27px; */
     line-height: 1.5;
     color: var(--color-scheme-2-text);
     margin-bottom: 24px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto;
+    max-height: 108px;
   }
   .feedbacks-item-user-info {
     display: flex;
@@ -79,8 +63,7 @@
     border-radius: 50px;
     background-color: aqua;
   }
-  .feedbacks-item-user {
-  }
+
   .feedbacks-item-user-name {
     font-weight: 600;
     font-size: 16px;
@@ -101,7 +84,17 @@
     align-items: center;
   }
   /* 1 */
-  .feedbacks-pagination-bullet {
+
+  /* 1 */
+  .feedbacks-swiper-pagination {
+    margin-left: 20px;
+  }
+
+  .feedbacks-swiper-controls {
+    overflow-x: hidden;
+  }
+  /* 2 */
+  .feedbacks-swiper-controls .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background: var(--color-scheme-2-text);
@@ -110,13 +103,15 @@
     margin: 0 4px;
     transition: background 0.3s;
     opacity: 0.2;
+    transform: none !important;
   }
-
-  .feedbacks-pagination-bullet-active {
+  .feedbacks-swiper-controls .swiper-pagination-bullet-active,
+  .feedbacks-pagination-bullet-active-main {
     background: var(--color-scheme-2-text);
     opacity: 1;
   }
-  /* 1 */
+
+  /* 2 */
   .feedbacks-swiper-pagination {
   }
 
@@ -140,93 +135,22 @@
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
-  .section-feedbacks {
-  }
-  .container {
-  }
-  .container-feedbacks {
-  }
-  .feedbacks-title {
-  }
-  .feedbacks-discription {
-  }
-  .swiper {
-  }
-  .feedbacks-swiper {
-  }
-  .swiper-wrapper {
-  }
-  .swiper-slide {
-  }
   .feedbacks-item {
     height: 244px !important;
-  }
-  .feedbacks-item-user-message {
-  }
-  .feedbacks-item-user-info {
-  }
-  .feedbacks-item-user-photo {
-  }
-  .feedbacks-item-user {
-  }
-  .feedbacks-item-user-name {
-  }
-  .feedbacks-item-user-role {
-  }
-  .feedbacks-swiper-controls {
-  }
-  .feedbacks-swiper-pagination {
-  }
-  .feedbacks-slider-controls {
-  }
-  .feedbacks-button-prev {
-  }
-  .feedbacks-button-next {
   }
 }
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
-  .section-feedbacks {
-  }
-  .container {
-  }
-  .container-feedbacks {
-  }
-  .feedbacks-title {
-  }
-  .feedbacks-discription {
-  }
-  .swiper {
-  }
-  .feedbacks-swiper {
-  }
-  .swiper-wrapper {
-  }
-  .swiper-slide {
-  }
   .feedbacks-item {
     height: 217px !important;
   }
   .feedbacks-item-user-message {
-  }
-  .feedbacks-item-user-info {
-  }
-  .feedbacks-item-user-photo {
-  }
-  .feedbacks-item-user {
-  }
-  .feedbacks-item-user-name {
-  }
-  .feedbacks-item-user-role {
-  }
-  .feedbacks-swiper-controls {
-  }
-  .feedbacks-swiper-pagination {
-  }
-  .feedbacks-slider-controls {
-  }
-  .feedbacks-button-prev {
-  }
-  .feedbacks-button-next {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: auto;
+    max-height: 81px;
   }
 }
