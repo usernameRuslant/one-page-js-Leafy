@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-const swiper = new Swiper('.feedbacks-swiper', {
+const swiper = new Swiper('.events-swiper', {
   breakpoints: {
     320: { slidesPerView: 1 },
     375: {
@@ -18,13 +18,23 @@ const swiper = new Swiper('.feedbacks-swiper', {
   },
   modules: [Navigation, Pagination],
   navigation: {
-    nextEl: '.feedbacks-button-next',
-    prevEl: '.feedbacks-button-prev',
+    nextEl: '.events-button-next',
+    prevEl: '.events-button-prev',
   },
   pagination: {
-    el: '.feedbacks-swiper-pagination',
+    el: '.events-swiper-pagination',
     clickable: true,
     dynamicBullets: true,
     dynamicMainBullets: 2,
   },
+});
+//
+document.querySelectorAll('.event-show-more').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const desc = document.getElementById(this.getAttribute('aria-controls'));
+    desc.classList.toggle('expanded');
+    btn.textContent = desc.classList.contains('expanded')
+      ? 'Hide'
+      : 'Read more';
+  });
 });
