@@ -2,6 +2,7 @@ import * as basicLightbox from 'basiclightbox';
 import 'basiclightbox/dist/basicLightbox.min.css';
 import { getBookById } from '../api';
 import iconSprite from './icons.svg';
+
 function createBookModalMarkup(book) {
   const {
     title = 'No title',
@@ -138,7 +139,6 @@ export async function openBookModal(bookId) {
       function cleanup() {
         document.body.classList.remove('mod-open');
         document.removeEventListener('keydown', handleEsc);
-        console.log('Модалка закрывается (basiclightbox:close)');
       }
       instance.element().addEventListener('basiclightbox:close', cleanup);
 

@@ -3,6 +3,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { openEventModal } from './event-modal';
+import { refs } from '../refs';
 
 const swiper = new Swiper('.events-swiper', {
   breakpoints: {
@@ -37,4 +39,11 @@ document.querySelectorAll('.event-show-more').forEach(btn => {
       ? 'Hide'
       : 'Read more';
   });
+});
+//
+
+document.querySelector('.section-events').addEventListener('click', e => {
+  if (e.target.closest('.events-register-modal-open')) {
+    openEventModal(e);
+  }
 });

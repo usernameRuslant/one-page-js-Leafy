@@ -14,4 +14,6 @@ export const refs = {
   /////
   selectBtn: document.querySelector('.books-categories-select-btn'),
   selectList: document.querySelector('.books-categories-select-list'),
+  //
+  registerEvent: document.querySelectorAll('.section-events'),
 };
