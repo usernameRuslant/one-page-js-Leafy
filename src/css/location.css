@@ -1,0 +1,129 @@
+/* Styles for Mobile devices */
+@media screen {
+  .location-map-container iframe {
+    filter: grayscale(1);
+
+    width: 100%;
+    height: 395px;
+  }
+  .section-location {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .location-info-side {
+    margin-bottom: 32px;
+  }
+  .location-info {
+    margin-bottom: 32px;
+  }
+  .location-eyebrow {
+    font-weight: 600;
+    font-size: 16px;
+
+    line-height: 1.5;
+    text-transform: capitalize;
+    color: var(--color-scheme-1-text);
+    margin-bottom: 16px;
+  }
+  .location-title {
+    font-weight: 600;
+    font-size: 48px;
+
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--color-scheme-1-text);
+    margin-bottom: 24px;
+  }
+  .location-discription {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--color-scheme-1-text);
+  }
+  .location-contacts {
+  }
+  .location-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .location-contact-item {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+  .location-contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .location-contact-name {
+    font-weight: 400;
+    font-size: 20px;
+
+    /* line-height: 28px; */
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--color-scheme-1-text);
+  }
+  .location-contact-link {
+    font-weight: 400;
+    font-size: 16px;
+
+    /* line-height: 24px; */
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--color-scheme-1-text);
+  }
+  .location-map-container {
+    max-width: 343px;
+  }
+}
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .location-map-container iframe {
+    width: 100%;
+
+    height: 395px;
+  }
+
+  .location-info-side {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 80px;
+  }
+  .location-info {
+    width: 336px;
+    margin-bottom: 0;
+  }
+
+  .location-contacts {
+    margin-bottom: 0;
+    width: 336px;
+  }
+
+  .location-map-container {
+    max-width: 704px;
+  }
+}
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .location-map-container iframe {
+    width: 100%;
+
+    height: 738px;
+  }
+
+  .location-info-side {
+    gap: 80px;
+  }
+  .location-info {
+    width: 732px;
+  }
+
+  .location-map-container {
+    max-width: 1312px;
+  }
+}
