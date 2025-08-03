@@ -13,10 +13,7 @@
     color: var(--color-scheme-1-text);
     margin-bottom: 16px;
   }
-  .container {
-  }
-  .container-events {
-  }
+
   .events-title {
     font-weight: 600;
     font-size: 36px;
@@ -35,28 +32,22 @@
     color: var(--color-scheme-1-text);
     margin-bottom: 32px;
   }
-  .swiper {
-  }
+
   .events-swiper {
     margin-bottom: 32px;
   }
-  .swiper-wrapper {
-  }
-  .swiper-slide {
-  }
+
   .events-item {
-    /* max-width: 342px; */
     width: 100%;
   }
   .events-item-event-photo {
     border-radius: 16px;
-    /* max-width: 342px; */
+
     height: 277px;
     margin-bottom: 24px;
     background-color: aquamarine;
   }
-  .events-item-event-info {
-  }
+
   .events-item-event-title {
     font-size: 24px;
 
@@ -88,19 +79,34 @@
     color: var(--color-neutral-darkest);
     background: transparent;
     border: transparent;
+    transition: color var(--transition-base);
+  }
+  .events-register-modal-open svg {
+    transition: fill var(--transition-base);
+  }
+  .events-register-modal-open:hover {
+    color: var(--color-bamboo);
+  }
+  .events-register-modal-open:hover svg {
+    fill: var(--color-bamboo);
   }
   .event-show-more {
     border: 1px solid var(--color-neutral-darkest);
     border-radius: 4px;
     padding: 10px 10px;
+    transition: background var(--transition-base), color var(--transition-base);
   }
+  .event-show-more:hover {
+    background: var(--color-neutral-darkest);
+    color: var(--color-white);
+  }
+
   .events-swiper-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .events-swiper-pagination {
-  }
+
   /* 1 */
 
   .events-swiper-pagination {
@@ -147,6 +153,29 @@
     justify-content: center;
     align-items: center;
     fill: white;
+  }
+  .events-button-prev:hover,
+  .events-button-next:hover {
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    background: var(--color-scheme-1-background);
+  }
+  .events-button-prev:focus,
+  .events-button-next:focus {
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    background: var(--color-scheme-1-background);
+  }
+  .events-button-prev:active,
+  .events-button-next:active {
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    background: var(--color-bamboo-darker);
+    fill: white;
+  }
+  .events-button-prev:disabled,
+  .events-button-next:disabled {
+    background: var(--color-scheme-3-foreground);
+    opacity: 0.2;
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    fill: var(--color-scheme-1-text);
   }
   .events-buttons-wrap {
     display: flex;

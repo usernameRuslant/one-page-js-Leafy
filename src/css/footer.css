@@ -28,6 +28,7 @@
   }
   .footer-nav-item {
     text-align: center;
+    transition: transform var(--transition-base);
   }
   .footer-nav-link {
     font-weight: 400;
@@ -37,6 +38,10 @@
     line-height: 1.5;
     text-transform: capitalize;
     color: var(--color-scheme-1-text);
+    transition: color var(--transition-base);
+  }
+  .footer-nav-item:hover {
+    transform: translateY(-4px);
   }
 
   .footer-form-label {
@@ -61,6 +66,16 @@
     width: 100%;
     height: 48px;
     background: var(--opacity-neutral-darkest-5);
+    outline: transparent;
+    transition: border-color var(--transition-base);
+  }
+  .footer-form-input:hover,
+  .footer-form-input:focus {
+    border-color: var(--color-neutral-darkest);
+  }
+  .footer-form-input::placeholder {
+    font: var(--text-regular-normal);
+    color: var(--opacity-neutral-darkest-60);
   }
   .footer-form-btn {
     border: 1px solid var(--color-neutral-darkest);
@@ -76,6 +91,16 @@
     /* line-height: 24px; */
     line-height: 1.5;
     color: var(--color-neutral-darkest);
+    transition: color var(--transition-base), background var(--transition-base);
+  }
+  .footer-form-btn:hover,
+  .footer-subs-button:focus {
+    color: var(--color-white);
+    background: var(--color-neutral-darkest);
+  }
+  .footer-form-btn:active {
+    color: var(--color-white);
+    background: var(--color-bamboo-dark);
   }
 
   .footer-separator {

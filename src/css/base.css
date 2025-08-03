@@ -76,6 +76,9 @@ body {
   background: var(--color-scheme-1-background);
   font-family: var(--font-family);
 }
+:root {
+  --transition-base: 250ms ease;
+}
 
 main {
   flex-grow: 1;
@@ -99,4 +102,10 @@ main:has(.back-link) {
 }
 body.mod-open {
   overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+body .basicLightbox {
+  background: rgba(0, 0, 0, 0.25);
 }

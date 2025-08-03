@@ -58,6 +58,12 @@
     flex-direction: column;
     gap: 8px;
   }
+  .location-contact-wrapper a {
+    transition: color var(--transition-base);
+  }
+  .location-contact-wrapper:hover a {
+    color: var(--color-bamboo);
+  }
   .location-contact-name {
     font-weight: 400;
     font-size: 20px;

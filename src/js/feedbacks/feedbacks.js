@@ -28,3 +28,9 @@ const swiper = new Swiper('.feedbacks-swiper', {
     dynamicMainBullets: 2,
   },
 });
+////////////снимаю стили фокуса с кнопок
+document
+  .querySelectorAll('.feedbacks-button-prev, .feedbacks-button-next')
+  .forEach(btn => {
+    btn.addEventListener('mouseup', () => btn.blur());
+  });

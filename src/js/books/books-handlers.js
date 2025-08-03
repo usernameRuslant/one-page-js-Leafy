@@ -1,3 +1,5 @@
+import iziToast from 'izitoast';
+
 import { getBooksByCategory, getTopBooks } from '../api';
 import { openBookModal } from './books-modal.js';
 import { onBooksDataLoaded } from './books-pagination.js';
@@ -29,8 +31,12 @@ export async function onCategoryLiClick(e) {
     }
     onBooksDataLoaded(books);
   } catch (error) {
-    // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить книги' });
-    console.error('Ошибка при выборе категории:', error);
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to load books. Please try again.',
+      position: 'topRight',
+    });
+    console.error('Error selecting category:', error);
   }
 }
 
@@ -49,21 +55,32 @@ export async function onCategorySelect(e) {
     }
     onBooksDataLoaded(books);
   } catch (error) {
-    // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить книги' });
-    console.error('Ошибка при выборе категории через select:', error);
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to load books. Please try again.',
+      position: 'topRight',
+    });
+    console.error('Error selecting category via select:', error);
   }
 }
 ///////////////////////////////////////
 export function onClickOpenModalBook(e) {
-  const btn = e.target.closest('.books-item-open-modal');
+  try {
+    const btn = e.target.closest('.books-item-open-modal');
+    const img = e.target.closest('.books-item-image');
+    if (!btn && !img) return;
 
-  const img = e.target.closest('.books-item-image');
-  if (!btn && !img) return;
+    const li = e.target.closest('.books-item');
+    if (!li) return;
 
-  const li = e.target.closest('.books-item');
-  if (!li) return;
-
-  const bookId = li.dataset.id;
-  openBookModal(bookId);
-  console.log('Клик по learn more, id книги:', bookId);
+    const bookId = li.dataset.id;
+    openBookModal(bookId);
+  } catch (error) {
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to open book modal.',
+      position: 'topRight',
+    });
+    console.error('Error opening book modal:', error);
+  }
 }

@@ -129,6 +129,32 @@
     justify-content: center;
     align-items: center;
     fill: white;
+
+    transition: border var(--transition-base), background var(--transition-base),
+      fill var(--transition-base);
+  }
+  .feedbacks-button-prev:hover,
+  .feedbacks-button-next:hover {
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    background: var(--color-scheme-1-background);
+  }
+  .feedbacks-button-prev:focus,
+  .feedbacks-button-next:focus {
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    background: var(--color-scheme-1-background);
+  }
+  .feedbacks-button-prev:active,
+  .feedbacks-button-next:active {
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    background: var(--color-bamboo-darker);
+    fill: white;
+  }
+  .feedbacks-button-prev:disabled,
+  .feedbacks-button-next:disabled {
+    background: var(--color-scheme-3-foreground);
+    opacity: 0.2;
+    border: 1px solid var(--opacity-neutral-darkest-15);
+    fill: var(--color-scheme-1-text);
   }
 }
 /* Styles for Tablet devices */

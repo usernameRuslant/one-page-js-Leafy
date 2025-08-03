@@ -1,4 +1,5 @@
 import axios from 'axios';
+import iziToast from 'izitoast';
 
 axios.defaults.baseURL = 'https://books-backend.p.goit.global/books';
 
@@ -7,7 +8,11 @@ export async function getCategories() {
     const response = await axios.get('/category-list');
     return response.data;
   } catch (error) {
-    // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить категории' });
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to load categories',
+      position: 'topRight',
+    });
     return [];
   }
 }
@@ -18,7 +23,12 @@ export async function getBooksByCategory(category) {
     const response = await axios.get(`/category?category=${category}`);
     return response.data;
   } catch (error) {
-    // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить книги' });
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to load books for this category',
+      position: 'topRight',
+    });
+
     return [];
   }
 }
@@ -29,7 +39,12 @@ export async function getTopBooks() {
     const response = await axios.get('/top-books');
     return response.data;
   } catch (error) {
-    // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить топовые книги' });
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to load top books',
+      position: 'topRight',
+    });
+
     return [];
   }
 }
@@ -39,7 +54,12 @@ export async function getBookById(id) {
     const response = await axios.get(`/${id}`);
     return response.data;
   } catch (error) {
-    // iziToast.error({ title: 'Ошибка', message: 'Не удалось загрузить книгу' });
+    iziToast.error({
+      title: 'Error',
+      message: 'Failed to load the book',
+      position: 'topRight',
+    });
+
     return {};
   }
 }

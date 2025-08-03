@@ -47,3 +47,9 @@ document.querySelector('.section-events').addEventListener('click', e => {
     openEventModal(e);
   }
 });
+////////////снимаю стили фокуса с кнопок
+document
+  .querySelectorAll('.events-button-prev, .events-button-next')
+  .forEach(btn => {
+    btn.addEventListener('mouseup', () => btn.blur());
+  });

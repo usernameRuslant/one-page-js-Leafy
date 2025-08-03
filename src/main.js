@@ -8,3 +8,4 @@ import './js/hero/hero.js';
 import './js/books/books.js';
 import './js/feedbacks/feedbacks.js';
 import './js/events/events.js';
+import './js/footer/footer.js';
